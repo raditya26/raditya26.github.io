@@ -11,6 +11,19 @@ h1 {
     font-size: 48px;
 }
 
+.product-container h4 {
+    border: rgb(122, 253, 188) solid 1px;
+    background-color: #edf8f4;
+    border-radius: 60px;
+    text-align: center;
+    color: gray;
+    padding: 10px;
+    width: 80%;
+    margin: 20px auto -20px auto ;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+
 .bg-green{
     background-color: #00754a !important;
     color: white !important;

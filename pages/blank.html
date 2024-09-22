@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found!</title>
+</head>
+<style>
+    body {
+        font-family: monospace;
+        margin: 30% auto;
+        width: 60%;
+        text-align: center;
+    }
+
+    h1, p {
+        transition:
+        transform 100ms ease-out,
+        opacity 200ms ease
+        ;
+    }
+
+
+    h1:hover, p:hover {
+        transform: scale(1.2);
+        opacity: 90%;
+    }
+
+    button {
+        cursor: pointer;
+        font-family: monospace;
+        padding: 10px 60px;
+        margin: 20px;
+        border-radius: 60px;        
+        transition:
+        background-color 200ms ease,
+        transform 100ms ease-out,
+        font-weight 100ms ease;
+        ;
+    }
+
+    button:hover {
+        background-color: rgba(20, 255, 43, 0.13);
+        transform: scale(1.2);
+        font-weight: 1000;
+    }
+
+    button:active {
+        background-color: rgba(255, 0, 0, 0.993);
+        color: white;
+        transform: scale(1.06);
+    }
+
+    .monokuma {
+        height: 50px;
+        transition: transform 100ms ease-out;
+    }
+
+    .monokuma:hover {
+        transform: rotateY(180deg);
+    }
+
+    .monokuma:active {
+        transform: translate(0px, -50px);
+    }
+</style>
+<body>
+    <img class="monokuma" src="https://i.pinimg.com/originals/57/9d/ad/579dad2b2b1ab8e630a79fe22a290476.png" alt="">
+    <h1>Oops! Page not found.</h1>
+    <p>Of course! This site is under construction.</p>
+    <button id="backButton">Get back to Home</button>
+</body>
+
+
+<!-- js -->
+<script>
+    document.getElementById("backButton").onclick = function() {      
+        window.location.href = "../index.html";
+    };
+</script>
+</html>

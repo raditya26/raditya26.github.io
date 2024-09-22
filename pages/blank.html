@@ -6,9 +6,16 @@
     <title>Page not found!</title>
 </head>
 <style>
+    html {
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; 
+        filter: blur(0.35px)
+    }
+
     body {
         font-family: monospace;
-        margin: 30% auto;
+        margin: 15% auto;
         width: 60%;
         text-align: center;
     }
@@ -22,30 +29,50 @@
 
 
     h1:hover, p:hover {
-        transform: scale(1.2);
+        transform: scale(1.15);
         opacity: 90%;
     }
 
-    button {
+    #backButton {
         cursor: pointer;
         font-family: monospace;
         padding: 10px 60px;
-        margin: 20px;
-        border-radius: 60px;        
+        border-radius: 60px;
+        max-width: fit-content;
+        margin: 20px auto;        
+        background: linear-gradient(
+            175deg,
+            rgba(7,166,89,0) 5%,
+            rgba(48,226,66,0) 35%,
+            rgba(153,246,109,0) 125%);
+        border: 2px solid black;
+        position: relative;
         transition:
-        background-color 200ms ease,
-        transform 100ms ease-out,
-        font-weight 100ms ease;
+            color 300ms ease,
+            border-color 300ms ease-out,
+            background 200ms ease,
+            transform 80ms ease-out,
+            font-weight 100ms ease,
+            box-shadow 400ms ease-out
         ;
     }
 
-    button:hover {
-        background-color: rgba(20, 255, 43, 0.13);
-        transform: scale(1.2);
+    #backButton:hover {
+        padding: 12px 62px;
+        color: rgb(11, 92, 0);
+        background: linear-gradient(
+            355deg,
+            rgba(7,166,89,1) 5%,
+            rgba(48,226,66,1) 35%,
+            rgba(153,246,109,1) 125%);
+        border: none;
+        transform: scale(1.06);
+        z-index: 1;
         font-weight: 1000;
+        box-shadow: 0px 15px 51px 0px rgba(55, 255, 131, 0.75);
     }
 
-    button:active {
+    #backButton:active {
         background-color: rgba(255, 0, 0, 0.993);
         color: white;
         transform: scale(1.06);
@@ -57,18 +84,19 @@
     }
 
     .monokuma:hover {
-        transform: rotateY(180deg);
+        transform: scale(1.15);
     }
 
     .monokuma:active {
         transform: translate(0px, -50px);
     }
+
 </style>
 <body>
     <img class="monokuma" src="https://i.pinimg.com/originals/57/9d/ad/579dad2b2b1ab8e630a79fe22a290476.png" alt="">
     <h1>Oops! Page not found.</h1>
     <p>Of course! This site is under construction.</p>
-    <button id="backButton">Get back to Home</button>
+    <div id="backButton">Get back to Home</div>
 </body>
 
 

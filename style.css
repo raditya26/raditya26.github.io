@@ -1,3 +1,14 @@
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    filter: blur(0.35px)
+}
+
+img {
+    filter: blur(0.3px); /* Subtle blur for smoothing */
+}
+
 body {
     font-family: "SoDo Sans SemiBold", Helvetica Neue, Helvetica,Arial,sans-serif;
     margin: 0;
